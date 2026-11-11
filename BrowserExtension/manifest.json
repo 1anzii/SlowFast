@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "SlowFast",
+  "version": "0.4.2",
+  "description": "用六档倍速控制当前网页视频，配合 SlowFast macOS 应用使用 Fn 快捷键。",
+  "permissions": ["scripting"],
+  "host_permissions": ["http://*/*", "https://*/*", "file:///*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "SlowFast · 视频倍速" },
+  "commands": {
+    "slower": { "suggested_key": { "default": "Ctrl+Shift+Comma", "mac": "MacCtrl+Shift+Comma" }, "description": "减慢一档" },
+    "faster": { "suggested_key": { "default": "Ctrl+Shift+Period", "mac": "MacCtrl+Shift+Period" }, "description": "加快一档" },
+    "reset": { "suggested_key": { "default": "Ctrl+Shift+0", "mac": "MacCtrl+Shift+0" }, "description": "恢复 1×" }
+  }
+}

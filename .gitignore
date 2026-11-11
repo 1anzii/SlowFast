@@ -1,0 +1,16 @@
+.build/
+dist/
+Backups/
+node_modules/
+.DS_Store
+.env
+.env.*
+*.p12
+*.pfx
+*.key
+*.p8
+*.pem
+*.keychain*
+*.mobileprovision
+*.log
+*.xcuserstate

@@ -1,0 +1,6 @@
+Original material, generated 2026-11-11 with the built-in image_gen tool (imagegen skill).
+Project asset: Resources/Textures/BrushedAluminum-v2.png
+Previous WornSilverMetal-v1.png retained only as design history; the app uses v2.
+
+Final prompt:
+Create one original photorealistic material texture for a native macOS vintage portable cassette player UI. A flat orthographic, edge-to-edge 1024x1536 portrait sheet of bare satin silver aluminum, neutral cool silver, fine tightly spaced horizontal brushed machining lines, a few shallow directional hairline metal scratches and light rub marks, slightly more scuffing toward the outer margins, center clean for controls. It must look like solid brushed aluminum that has been gently used, with sharp thin metallic scratches catching light, NOT peeling paint, NOT flaking plaster, NOT concrete, NOT stone, no corrosion, no rust, no holes, no cracked coating, no cloudy mottling. Broad soft studio reflections with restrained contrast, consistent fine surface scale. No object outline, no frame, no bevel, no typography, no symbols, no buttons, no knobs, no logo, no watermarks, no perspective. This image is only the continuous surface material; all UI controls will be native overlays.

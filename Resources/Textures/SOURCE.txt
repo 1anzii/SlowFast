@@ -1,0 +1,8 @@
+Current: BrushedAluminum-v2.png
+Original bare satin aluminum with horizontal brushing and shallow metallic scratches.
+Generated with the built-in image_gen tool on 2026-11-11. Exact prompt: BrushedAluminum-v2-prompt.txt.
+
+Previous design history: WornSilverMetal-v1.png
+Original generated material for SlowFast, created with the imagegen skill on 2026-11-11.
+Warm silver enamel over aluminum with irregular perimeter paint wear; no third-party brand artwork used.
+Displayed as a native app material beneath SwiftUI controls. Font license is in Resources/Fonts.

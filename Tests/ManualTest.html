@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>SlowFast · 实机快捷键测试</title>
+<style>body{max-width:900px;margin:36px auto;padding:0 24px;background:#f5f5ef;color:#20382a;font:16px/1.7 -apple-system,sans-serif}h1{margin-bottom:8px}video{width:100%;max-height:410px;background:#111;border-radius:16px}.status{display:flex;gap:16px;align-items:center;padding:14px 0}#rate{font-size:42px;font-weight:700}code{background:#e0ebcf;padding:2px 8px;border-radius:6px}li{font-family:monospace}small{color:#5d7058}</style>
+<h1>SlowFast 实机测试</h1>
+<p>这是本机生成的测试视频，没有外部网络请求。保持此标签页在前台并开始播放，然后测试三个快捷键。</p>
+<video id="video" controls muted loop preload="auto" src="../.build/manual-test.mp4"></video>
+<div class="status"><strong id="rate">1×</strong><span id="play">尚未播放</span><span id="clock">视频时间：0.00 秒</span></div>
+<p><code>Fn + ,</code> 预期减慢一档　<code>Fn + .</code> 预期加快一档　<code>Fn + ?</code> 预期恢复 1×</p>
+<p><small>下列记录由 video 元素的真实 ratechange 事件产生；不是根据按键推测结果。</small></p>
+<ol id="log"><li>初始倍速：1×</li></ol>
+<script>
+const video=document.querySelector('#video');
+function status(){document.querySelector('#rate').textContent=video.playbackRate+'×';document.querySelector('#play').textContent=video.paused?'已暂停':'正在播放';document.querySelector('#clock').textContent='视频时间：'+video.currentTime.toFixed(2)+' 秒'}
+video.addEventListener('ratechange',()=>{const line=document.createElement('li');line.textContent=new Date().toLocaleTimeString('zh-CN',{hour12:false})+'  实际倍速 → '+video.playbackRate+'×';document.querySelector('#log').prepend(line);status()});
+video.addEventListener('play',status);video.addEventListener('pause',status);setInterval(status,200);
+</script></html>

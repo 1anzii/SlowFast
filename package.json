@@ -1,0 +1,8 @@
+{
+  "name": "slowfast-tests",
+  "version": "0.4.2",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "description": "Development-only browser integration tests for SlowFast",
+  "devDependencies": { "playwright": "1.56.1" }
+}

@@ -1,0 +1,13 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SlowFast · 连接检测</title>
+<style>body{max-width:700px;margin:60px auto;padding:0 24px;background:#e3e3e1;color:#272a29;font:15px/1.8 -apple-system,sans-serif}h1{letter-spacing:-1px}video{width:100%;max-height:310px;border-radius:12px;background:#202322}section{padding:24px;border:1px solid #b5b7b5;border-radius:18px;background:linear-gradient(#f6f6f4,#cececb);box-shadow:0 12px 30px #0001}strong{font:48px ui-monospace,monospace}small{color:#5e625f}code{background:#0001;border-radius:4px;padding:2px 5px}li{font:12px/1.8 ui-monospace,monospace}</style>
+<section><h1>SlowFast · 连接检测</h1><p>这是随应用提供的本机测试页。连接就绪后，回到你自己的视频页面即可使用。</p>
+<video id="video" controls muted loop preload="auto" src="connection-test.mp4"></video>
+<p><strong id="rate">1×</strong>　<span id="play">点击视频开始播放</span></p>
+<p><code>Fn + ,</code> 减速　<code>Fn + .</code> 加速　<code>Fn + Shift + /</code> 恢复原速</p>
+<small>以下记录来自视频真实的倍速变化事件。本页不联网、不上传数据。</small><ol id="log"></ol></section>
+<script>
+const video=document.querySelector('#video');
+function status(){document.querySelector('#rate').textContent=video.playbackRate+'×';document.querySelector('#play').textContent=video.paused?'已暂停':'正在播放'}
+video.addEventListener('ratechange',()=>{const line=document.createElement('li');line.textContent=new Date().toLocaleTimeString('zh-CN',{hour12:false})+' 实际倍速 → '+video.playbackRate+'×';document.querySelector('#log').prepend(line);status()});
+video.addEventListener('play',status);video.addEventListener('pause',status);
+</script></html>
